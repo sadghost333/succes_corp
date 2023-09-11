@@ -1,0 +1,67 @@
+@import './fonts.scss';
+
+$brown: #9A8A78;
+$dark: #262626;
+
+@mixin flex-wall {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    background-color: $bro;
+}
+
+
+.container {
+    width: 75vw;
+    margin: 0 auto;
+}
+
+.header {
+    @include flex-center();
+    height: 80px;
+    background-color: $brown;
+}
+
+.header-wrapper{
+    height: 70px;
+    @include flex-wall();
+}
+
+.logo-wrapper{
+    width: 165px;
+    height: 60px;
+    @include flex-wall();
+    gap: 30px;
+}
+
+.logo-text {
+    width: 60px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+    align-self: self-end;
+}
+
+.logo-img {
+    width: 60px;
+    align-self: self-start;
+}
+
+
