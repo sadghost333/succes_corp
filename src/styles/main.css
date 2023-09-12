@@ -28,9 +28,6 @@
 }
 
 body {
-  font-family: "Oswald", sans-serif;
-  font-style: normal;
-  font-weight: 300;
   background-color: #262626;
 }
 
@@ -39,15 +36,24 @@ body {
   margin: 0 auto;
 }
 
+.bold-text {
+  font-weight: 700;
+  font-size: 18px;
+}
+
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80px;
   background-color: #9A8A78;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .header-wrapper {
+  padding-top: 10px;
   height: 70px;
   display: flex;
   justify-content: space-between;
@@ -55,6 +61,7 @@ body {
 }
 
 .logo-wrapper {
+  margin-bottom: 26px;
   width: 165px;
   height: 60px;
   display: flex;
@@ -74,4 +81,88 @@ body {
 .logo-img {
   width: 60px;
   align-self: self-start;
+}
+
+.header-items-wrapper {
+  width: 40%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-item {
+  width: 80px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-item-link {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 16px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.header-item-link:hover {
+  font-size: 18px;
+}
+
+.main-section {
+  margin-top: 50px;
+  height: 500px;
+}
+
+.main-section-wrapper {
+  height: 300px;
+  border: 1px solid #9A8A78;
+  border-radius: 5px;
+}
+
+.main-section-header-wrapper {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-section-header-text {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 30px;
+  color: #9A8A78;
+}
+
+.main-section-content-wrapper {
+  margin-top: 30px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-section-content-text {
+  width: 800px;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 15px;
+  text-align: center;
+  color: #9A8A78;
+}
+
+.second-section-wrapper {
+  margin-top: 50px;
 }/*# sourceMappingURL=main.css.map */

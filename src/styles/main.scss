@@ -15,36 +15,46 @@ $dark: #262626;
     align-items: center;
 }
 
+@mixin font {
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: "Oswald", sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    background-color: $bro;
+    background-color: $dark;
 }
-
 
 .container {
     width: 75vw;
     margin: 0 auto;
 }
 
+.bold-text {
+    font-weight: 700;
+    font-size: 18px;
+}
 .header {
     @include flex-center();
     height: 80px;
     background-color: $brown;
+    user-select: none;
 }
 
 .header-wrapper{
+    padding-top: 10px;
     height: 70px;
     @include flex-wall();
 }
 
 .logo-wrapper{
+    margin-bottom: 26px;
     width: 165px;
     height: 60px;
     @include flex-wall();
@@ -64,4 +74,69 @@ body {
     align-self: self-start;
 }
 
+.header-items-wrapper {
+    width: 40%;
+    height: 60px;
+    @include flex-wall();
+}
 
+.header-item {
+    width: 80px;
+    height: 30px;
+    @include flex-center();
+}
+
+.header-item-link{
+    @include font();
+    font-size: 16px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.header-item-link:hover{
+    font-size: 18px ;
+}
+
+.main-section {
+    margin-top: 50px;
+    height: 500px;
+}
+
+.main-section-wrapper {
+    height: 300px;
+    border: 1px solid $brown;
+    border-radius: 5px;
+}
+
+.main-section-header-wrapper {
+    height: 70px;
+    @include flex-center();
+}
+
+.main-section-header-text {
+    @include font();
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 30px;
+    color: $brown;
+}
+
+.main-section-content-wrapper{
+    margin-top: 30px;
+    height: 100px;
+    @include flex-center();
+}
+
+.main-section-content-text {
+    width: 800px;
+    @include font();
+    font-size: 15px;
+    text-align: center;
+    color: $brown;
+}
+
+.second-section-wrapper{
+    margin-top: 50px;
+}
