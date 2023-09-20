@@ -23,6 +23,10 @@ $font-color: #e7e4e4;
     color: #FFFFFF;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -30,6 +34,7 @@ $font-color: #e7e4e4;
 
 body {
     background-color: $dark;
+    user-select: none;
 }
 
 .container {
@@ -43,10 +48,12 @@ body {
 }
 
 .header {
+    position: sticky;
+    top: 0;
+    z-index: 3;
     @include flex-center();
-    height: 80px;
+    height: 50px;
     background-color: $brown;
-    user-select: none;
 }
 
 .header-wraper{
@@ -102,7 +109,7 @@ body {
 }
 
 .main-section {
-    height: 754px;
+    height: 703px;
     position: relative;
 }
 
@@ -113,6 +120,7 @@ body {
     z-index: -1;
     background-color: $dark;
     opacity: 0.7;
+    filter: blur(3px);
 }
 
 .main-bg-photo {
@@ -227,4 +235,186 @@ body {
     text-align: center;
     font-weight: 300;
     font-size: 15px;
+}
+
+.years-of-work-section {
+    height: 284px;
+}
+
+.years-of-work-content-wraper{
+    margin-top: 10px;
+    height: 280px;
+    width: 100%;
+    border-radius: 5px;
+    @include flex-wall();
+    justify-content:  center;
+    gap: 110px;
+}
+
+.years-of-work-text{
+    width: 550px;
+    height: 155px;
+    @include font();
+    font-weight: 300;
+    letter-spacing: 3px;
+    opacity: 0.8;
+    align-self: flex-end;
+    margin-bottom: 30px;
+}
+
+.years-of-work-img {
+    margin-left: 10px;
+    width: 400px;
+    height: 272px;
+    align-self: flex-end;
+    opacity: 0.5;
+}
+
+.vacancies-section {
+    position: relative;
+    padding-top: 1px;
+    height: 800px;
+}
+
+.vacancies-bg-photo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../assets/img/vacancies_bg.jpg) center center/1500px auto no-repeat;
+    z-index: -2;
+    filter: blur(3px);
+}
+
+.vacancies-wraper {
+    margin-top: 50px;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    border: 1px solid $brown;
+    border-radius: 5px;
+}
+
+.vacancies-header {
+    margin-top: 20px;
+    @include font();
+    font-weight: 400;
+    letter-spacing: 4px;
+    font-size: 30px;
+}
+
+.vacancies-wraper-bg{
+    position: absolute;
+    top: 140px;
+    width: 67.5%;
+    height: 71%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    opacity: 0.3;
+}
+
+.vacancies-items-wraper {
+    width: 90%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    opacity: 0.5;
+}
+
+.vacancies-item-wraper{
+    width: 20%;
+    height: 30%;
+    background: #000;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.vacancies-item-header-wraper{
+    width: 95%;
+    height: 25%;
+    @include flex-center();
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.vacancies-item-header-text {
+    @include font();
+    text-align: center;
+}
+
+.vacancies-item-text {
+    width: 95%;
+    height: 60%;
+    @include font();
+    font-weight: 300;
+    font-size: 65%;
+    text-align: center;
+}
+
+footer {
+    height: 50px; 
+    background-color: $brown;
+    opacity: 0.7;
+}
+
+.footer-main-wraper {
+    width: 100%;
+    height: 50px;
+    @include flex-center();
+    gap: 150px;
+}
+
+.footer-left-wraper {
+    width: 20%;
+    height: 80%;
+    @include flex-center();
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.footer-contacts-header {
+    width: 100%;
+    height: 50%;
+    @include font();
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-align: center;
+    color: #000000;
+}
+
+.footer-contacts-text {
+    width: 100%;
+    height: 50%;
+    @include font();
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #000000;
+}
+
+.footer-center-wraper {
+    width: 20%;
+    @include flex-center();
+    @include font();
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #000000;
+}
+
+.footer-right-wraper{
+    width: 20%;
+    @include flex-center();
+    justify-content: flex-end;
+    @include font();
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #000000;
 }
