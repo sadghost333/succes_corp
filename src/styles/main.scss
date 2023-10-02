@@ -58,16 +58,15 @@ body {
 
 .header-wraper{
     padding-top: 10px;
-    height: 70px;
+    height: 65px;
     @include flex-wall();
 }
 
 .logo-wraper{
     margin-bottom: 26px;
     width: 165px;
-    height: 60px;
+    height: 65px;
     @include flex-wall();
-    gap: 30px;
 }
 
 .logo-text {
@@ -79,13 +78,13 @@ body {
 }
 
 .logo-img {
-    width: 60px;
-    align-self: self-start;
+    width: 52px;
+    align-self: self-end;
 }
 
 .header-items-wraper {
     width: 300px;
-    height: 60px;
+    height: 50px;
     @include flex-wall();
 }
 
@@ -147,7 +146,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url(../assets/img/section_1_bg.jpg) center center/1500px 1500px no-repeat;
+    background: url(../assets/img/section_1_bg.jpg) center center/1500px 1500px repeat-y;
     z-index: -2;
 }
 
@@ -162,7 +161,6 @@ body {
 
 .main-section-first-wraper {
     margin-top: 50px;
-    padding: 10px;
     height: auto;
     width: 100%;
     border: 1px solid $brown;
@@ -311,6 +309,7 @@ body {
 }
 
 .vacancies-wraper {
+    margin: 0 auto;
     padding: 4px 15px 15px 15px;
     position: relative;
     margin-top: 50px;
@@ -367,7 +366,9 @@ body {
     align-items: center;
     justify-content: flex-start;
     gap: 15px;
+    transition: 1s;
 }
+
 
 .vacancies-item-header-wraper{
     width: 95%;
@@ -510,6 +511,10 @@ footer {
 @media screen and (max-width : 630px){
     .burger-menu{
         display: block;
+    }
+
+    .header {
+        position: static;
     }
     .burger-menu_button {
         position: fixed;
